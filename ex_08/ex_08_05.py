@@ -1,14 +1,14 @@
 inp = input('Enter file: ')
 
-try :
+try:
     fhand = open(inp)
-except :
+except IOError:
     print('File not found!')
     quit()
 
 counter = 0
-for line in fhand :
-    if line.startswith('From ') :
+for line in fhand:
+    if line.startswith('From '):
         print(line.split()[1])
         counter = counter + 1
 

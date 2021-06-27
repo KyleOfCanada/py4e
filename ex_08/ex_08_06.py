@@ -1,19 +1,22 @@
 nums = list()
 
-while True :
-    
+while True:
+
     inp = input('Enter a number: ')
 
-    if inp == 'done' :
+    if inp == 'done':
         break
 
     try:
         num = float(inp)
-    except:
+    except ValueError:
         print('Not a number!')
         continue
 
     nums.append(num)
 
-print('Maximum:', max(nums))
-print('Minimum:', min(nums))
+if len(nums) == 0:
+    print('No numbers entered!')
+else:
+    print('Maximum:', max(nums))
+    print('Minimum:', min(nums))
